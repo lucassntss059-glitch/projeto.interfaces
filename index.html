@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login — CondoFix</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="pular" href="#conteudo">Ir para o conteúdo</a>
+    <header class="topo">
+      <a class="marca" href="index.html"
+        ><img
+          class="logo-icone"
+          src="img/logo-icone.png"
+          alt=""
+          width="202"
+          height="192"
+        /><span>CondoFix</span></a
+      >
+    </header>
+    <main id="conteudo">
+      <section class="painel" aria-labelledby="t-login">
+        <img
+          class="logo-grande"
+          src="img/logo.png"
+          alt="Logotipo do CondoFix: casa com sinal de verificado e chave inglesa dentro de um círculo. Soluções eficientes para o seu condomínio"
+          width="304"
+          height="272"
+        />
+        <h1 id="t-login">Login</h1>
+        <p class="aviso" id="aviso" role="status"></p>
+        <form id="formLogin" action="inicio.html" method="get">
+          <div class="campo">
+            <label for="email">Insira o seu e-mail</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              required
+              autocomplete="email"
+              data-vazio="Digite o seu e-mail."
+              data-invalido="Use um e-mail válido, como nome@exemplo.com."
+              aria-describedby="erro-email"
+            />
+            <p class="erro" id="erro-email"></p>
+          </div>
+          <div class="campo">
+            <label for="senha">Insira a sua senha</label>
+            <input
+              id="senha"
+              name="senha"
+              type="password"
+              required
+              minlength="6"
+              autocomplete="current-password"
+              data-vazio="Digite a sua senha."
+              aria-describedby="erro-senha"
+            />
+            <p class="erro" id="erro-senha"></p>
+          </div>
+          <label class="check"
+            ><input type="checkbox" name="manter" /> Manter-me conectado</label
+          >
+          <button class="botao botao-ok" type="submit">Fazer login</button>
+        </form>
+        <p class="links"><a href="#" data-em-breve>Esqueceu a senha?</a></p>
+        <p class="links"><a href="#" data-em-breve>Criar nova conta</a></p>
+      </section>
+    </main>
+    <footer class="rodape">
+      <p>
+        CondoFix — projeto acadêmico de Análise e Desenvolvimento de Sistemas.
+      </p>
+    </footer>
+    <button
+      type="button"
+      class="botao-tema"
+      id="btnTema"
+      aria-label="Ativar tema escuro"
+      title="Ativar tema escuro"
+    >
+      ☾
+    </button>
+  </body>
+</html>
