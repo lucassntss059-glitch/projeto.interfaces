@@ -273,6 +273,6 @@
     filtro.addEventListener('change', desenhar);
     ordem.addEventListener('change', desenhar);
     busca.form.addEventListener('submit', function (e) { e.preventDefault(); });
-    desenhar() ;
+    desenhar();
   }
 })();
