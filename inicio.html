@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Início — CondoFix</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+<header class="topo">
+  <a class="marca" href="inicio.html"><img class="logo-icone" src="img/logo-icone.png" alt="" width="202" height="192"><span>CondoFix</span></a>
+  <button type="button" class="botao-menu" id="btnMenu" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav class="menu" id="menu" aria-label="Principal">
+    <ul>
+      <li><a href="inicio.html" aria-current="page">Início</a></li>
+      <li><a href="nova-solicitacao.html">Nova solicitação</a></li>
+      <li><a href="minhas-solicitacoes.html">Minhas solicitações</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="index.html">Sair</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="conteudo">
+  <section class="hero" aria-labelledby="t-ola">
+    <img class="ilustra" src="img/portao.svg" alt="Ilustração de um portão de garagem com o motor ao lado, exemplo de problema que o morador pode registrar." width="236" height="128">
+    <h1 id="t-ola">Olá, <span id="nomeMorador">Marina</span>!</h1>
+    <p>O que você precisa registrar no condomínio?</p>
+    <div class="acoes">
+      <a class="botao" href="nova-solicitacao.html">Nova solicitação</a>
+      <a class="botao botao-sec" href="minhas-solicitacoes.html">Ver minhas solicitações</a>
+    </div>
+  </section>
+  <section aria-labelledby="t-ultimas">
+    <h2 id="t-ultimas">Últimas solicitações</h2>
+    <ul class="lista-simples" id="listaUltimas"></ul>
+  </section>
+</main>
+<footer class="rodape"><p>CondoFix — projeto acadêmico de Análise e Desenvolvimento de Sistemas.</p></footer>
+<button type="button" class="botao-tema" id="btnTema" aria-label="Ativar tema escuro" title="Ativar tema escuro">☾</button>
+</body>
+</html>
