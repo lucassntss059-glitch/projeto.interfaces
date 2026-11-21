@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nova solicitação — CondoFix</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/script.js" defer></script>
+</head>
+<body>
+<a class="pular" href="#conteudo">Ir para o conteúdo</a>
+<header class="topo">
+  <a class="marca" href="inicio.html"><img class="logo-icone" src="img/logo-icone.png" alt="" width="202" height="192"><span>CondoFix</span></a>
+  <button type="button" class="botao-menu" id="btnMenu" aria-expanded="false" aria-controls="menu">Menu</button>
+  <nav class="menu" id="menu" aria-label="Principal">
+    <ul>
+      <li><a href="inicio.html">Início</a></li>
+      <li><a href="nova-solicitacao.html" aria-current="page">Nova solicitação</a></li>
+      <li><a href="minhas-solicitacoes.html">Minhas solicitações</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="index.html">Sair</a></li>
+    </ul>
+  </nav>
+</header>
+<main id="conteudo">
+  <h1>Nova solicitação</h1>
+  <p class="progresso" id="progresso">Passo 1 de 3</p>
+  <form id="formSolicitacao" novalidate>
+
+    <section class="passo" aria-labelledby="t-p1">
+      <h2 id="t-p1" tabindex="-1">O que aconteceu?</h2>
+      <p>Escolha uma opção abaixo.</p>
+      <fieldset data-vazio="Escolha o tipo da solicitação.">
+        <legend class="so-leitor">Tipo da solicitação</legend>
+        <label class="opcao"><input type="radio" name="tipo" value="Problema" required aria-describedby="erro-tipo"> Problema</label>
+        <label class="opcao"><input type="radio" name="tipo" value="Reclamação" required aria-describedby="erro-tipo"> Reclamação</label>
+        <label class="opcao"><input type="radio" name="tipo" value="Manutenção" required aria-describedby="erro-tipo"> Manutenção</label>
+        <label class="opcao"><input type="radio" name="tipo" value="Instalação" required aria-describedby="erro-tipo"> Instalação</label>
+        <p class="erro" id="erro-tipo"></p>
+      </fieldset>
+      <button type="button" class="botao" data-ir="1">Continuar</button>
+    </section>
+
+    <section class="passo" hidden aria-labelledby="t-p2">
+      <h2 id="t-p2" tabindex="-1">Conte mais detalhes sobre sua solicitação</h2>
+      <div class="campo">
+        <label for="descricao">Descrição do problema *</label>
+        <textarea id="descricao" name="descricao" rows="4" required minlength="10" placeholder="O motor do portão parou..." data-vazio="Descreva o que aconteceu." aria-describedby="erro-descricao"></textarea>
+        <p class="erro" id="erro-descricao"></p>
+      </div>
+      <div class="campo">
+        <label for="local">Local *</label>
+        <input id="local" name="local" type="text" required placeholder="Bloco A - Garagem" data-vazio="Informe o local." aria-describedby="erro-local">
+        <p class="erro" id="erro-local"></p>
+      </div>
+      <div class="campo">
+        <label for="imagem">Imagens do ocorrido (opcional)</label>
+        <input id="imagem" name="imagem" type="file" accept="image/*" aria-describedby="erro-imagem">
+        <p class="erro" id="erro-imagem"></p>
+      </div>
+      <div class="acoes">
+        <button type="button" class="botao botao-sec" data-ir="0">← Voltar</button>
+        <button type="button" class="botao" data-ir="2">Revisar</button>
+      </div>
+    </section>
+
+    <section class="passo" hidden aria-labelledby="t-p3">
+      <h2 id="t-p3" tabindex="-1">Confira os dados</h2>
+      <dl class="revisao">
+        <dt>Tipo</dt><dd id="rev-tipo"></dd>
+        <dt>Descrição</dt><dd id="rev-descricao"></dd>
+        <dt>Local</dt><dd id="rev-local"></dd>
+        <dt>Imagem</dt><dd id="rev-imagem"></dd>
+      </dl>
+      <div class="acoes">
+        <button type="button" class="botao botao-sec" data-ir="1">Editar</button>
+        <button type="submit" class="botao botao-ok">Enviar solicitação</button>
+      </div>
+    </section>
+
+    <section class="passo" hidden aria-labelledby="t-p4">
+      <h2 id="t-p4" tabindex="-1">✓ Solicitação enviada!</h2>
+      <p>A administração recebeu o seu pedido.</p>
+      <p>Seu número de protocolo é: <strong class="protocolo" id="protocolo"></strong></p>
+      <div class="acoes">
+        <a class="botao botao-sec" href="inicio.html">Voltar ao início</a>
+        <a class="botao" href="minhas-solicitacoes.html">Ver solicitação</a>
+      </div>
+    </section>
+  </form>
+</main>
+<footer class="rodape"><p>CondoFix — projeto acadêmico de Análise e Desenvolvimento de Sistemas.</p></footer>
+<button type="button" class="botao-tema" id="btnTema" aria-label="Ativar tema escuro" title="Ativar tema escuro">☾</button>
+</body>
+</html>
